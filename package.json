@@ -1,0 +1,27 @@
+{
+  "name": "axeptio-dpomap-api",
+  "version": "1.0.0",
+  "description": "API for the DPO finder map",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "campsi": "^1.0.7",
+    "campsi-service-auth": "^2.0.0",
+    "campsi-service-docs": "campsi/campsi-service-docs#bugfix/set-state",
+    "config": "^1.30.0",
+    "debug": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
