@@ -1,6 +1,18 @@
 const path = require('path');
+const { LocalAssetStorage } = require('campsi-service-assets');
+
 
 module.exports = (env) => {
+
+const storages = {
+    local: new LocalAssetStorage({
+      name: 'local',
+      title: 'server',
+      dataPath: path.join(__dirname, '..', 'data'),
+      baseUrl: env.publicURL + '/assets'
+    })
+  };
+
     return {
         port: env.port,
         campsi: {
@@ -10,6 +22,12 @@ module.exports = (env) => {
         services: {
             app: {
 
+            },
+            assets: {
+                options: {
+                    getStorage: () => storages.local,
+                    storages: storages
+                }
             },
             auth: {
                 options: {

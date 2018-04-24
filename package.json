@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "campsi": "^1.0.7",
+    "campsi-service-assets": "^1.0.2",
     "campsi-service-auth": "^2.0.0",
     "campsi-service-docs": "campsi/campsi-service-docs#bugfix/set-state",
     "config": "^1.30.0",

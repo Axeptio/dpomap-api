@@ -2,9 +2,10 @@ const config = require('config');
 const debug = require('debug')('dpomap');
 const CampsiServer = require('campsi');
 const services = {
+  assets: require('campsi-service-assets'),
   auth: require('campsi-service-auth'),
   data: require('campsi-service-docs'),
-  app: require('./app')
+  app: require('./app'),
 };
 const campsi = new CampsiServer(config.campsi);
 
@@ -24,10 +25,8 @@ campsi.start().catch((err) => {
 
 process.on('uncaughtException', (reason, p) => {
   debug('Uncaught Exception at:', p, 'reason:', reason);
-  process.exit(1);
 });
 
 process.on('unhandledRejection', (reason, p) => {
   debug('Unhandled Rejection at:', p, 'reason:', reason);
-  process.exit(1);
 });
