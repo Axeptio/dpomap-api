@@ -12,7 +12,7 @@
   "dependencies": {
     "campsi": "^1.0.7",
     "campsi-service-assets": "^1.0.2",
-    "campsi-service-auth": "^2.0.0",
+    "campsi-service-auth": "github:campsi/campsi-service-auth#feature/auth-local-errors",
     "campsi-service-docs": "campsi/campsi-service-docs#bugfix/set-state",
     "config": "^1.30.0",
     "debug": "^3.1.0"
