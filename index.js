@@ -19,6 +19,9 @@ campsi.on('campsi/ready', () => {
   campsi.listen(config.port);
 });
 
+campsi.on('assets/uploadError', () => {
+  debug('error during upload');
+});
 campsi.start().catch((err) => {
   debug(err);
 });

@@ -51,7 +51,7 @@ const storages = {
                         approvedEntry: {
                             defaultState: 'published',
                             permissions: {
-                                owner: { submitted: '*' },
+                                owner: { submitted: '*', published: 'DELETE' },
                                 public: { published: 'GET' }
                             },
                             states: {
